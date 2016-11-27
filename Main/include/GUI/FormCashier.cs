@@ -29,18 +29,18 @@ namespace Main.include.GUI
         private void button2_Click(object sender, EventArgs e)
         {
             Cashier cashier = new Cashier();
-            bool switchBool=false;
-            switchBool = cashier.CashEnterToDB(textBox1.Text, textBox2.Text,textBox3.Text);
+            string err;
+           err = cashier.CashEnter(textBox1.Text, textBox2.Text,textBox3.Text);
             
-           if (!switchBool)
+            if (err =="1")
             {
-                message.MessageOk("Пожалуйста заполните все поля", " Error 3");
-            }
-            else
-            {  
                 Hide();
                 frm4.ShowDialog();
-                Close();
+                Close();         
+            }
+            else
+            {
+                message.MessageOk(err, "Error");
             }
         }
 

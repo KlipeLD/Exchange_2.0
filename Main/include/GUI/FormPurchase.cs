@@ -29,13 +29,20 @@ namespace Main.include.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
+            Cashier cashier = new Cashier();
+            string err;
+            err = cashier.SaleOperation(textBox1.Text, textBox4.Text, textBox5.Text, comboBox1.Text);
+
+            if (err == "1")
             {
-                message.MessageOk("Пожалуйста заполните все поля", "Ошибка");                
+                //  Hide();
+                // frm4.ShowDialog();
+                // Close();
+                message.MessageOk("Операция прошла успешно!", "Успех");
             }
             else
             {
-                message.MessageOk("Операция совершена успешно", "Успех");
+                message.MessageOk(err, "Error");
             }
         }
 
@@ -53,6 +60,8 @@ namespace Main.include.GUI
 
         private void Purchase_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'exchangeDataSet.Курс' table. You can move, or remove it, as needed.
+            this.курсTableAdapter.Fill(this.exchangeDataSet.Курс);
 
         }
     }

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
 using MainDLL;
 
 namespace Main.include.GUI
@@ -24,7 +23,9 @@ namespace Main.include.GUI
         private void Stat_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'exchangeDataSet1.Список_операций' table. You can move, or remove it, as needed.
-         /*   this.список_операцийTableAdapter1.Fill(this.exchangeDataSet1.Список_операций);*/
+            this.список_операцийTableAdapter1.Fill(this.exchangeDataSet1.Список_операций);
+            // TODO: This line of code loads data into the 'exchangeDataSet.Список_операций' table. You can move, or remove it, as needed.
+            this.список_операцийTableAdapter.Fill(this.exchangeDataSet.Список_операций);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -54,6 +55,37 @@ namespace Main.include.GUI
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.список_операцийTableAdapter.FillBy(this.exchangeDataSet.Список_операций);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.список_операцийTableAdapter.FillBy1(this.exchangeDataSet.Список_операций);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }

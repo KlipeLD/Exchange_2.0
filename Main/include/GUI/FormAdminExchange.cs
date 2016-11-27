@@ -16,18 +16,12 @@ namespace Main.include.GUI
     public partial class FormAdminExchange : Form
     { 
         ExMessage message = new ExMessage();
-
         FormAdminOption formtoopen = new FormAdminOption();
-
         public FormAdminExchange()
         {
             InitializeComponent();
-         /* ExDatabase db = new ExDatabase();
-            db.ReadDB(textBox12,textBox11,  textBox10, textBox9,
-           textBox4, textBox3, textBox16, textBox15, textBox6,
-           textBox5,  textBox8, textBox7, textBox14, textBox13,
-           textBox1,  textBox2, comboBox1, comboBox2);
-           */
+            Admin admin = new Admin();
+           // List<string> arr = admin.ReadFromDB();                
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -101,7 +95,6 @@ namespace Main.include.GUI
         private void button2_Click(object sender, EventArgs e)
         {
 
-
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -173,6 +166,8 @@ namespace Main.include.GUI
 
         private void Admin_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'exchangeDataSet.Курс' table. You can move, or remove it, as needed.
+            this.курсTableAdapter.Fill(this.exchangeDataSet.Курс);
 
         }
 

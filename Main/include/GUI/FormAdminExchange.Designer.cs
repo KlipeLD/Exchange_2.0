@@ -54,7 +54,6 @@
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.курсBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -68,12 +67,22 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.курсBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.exchangeDataSet = new Main.ExchangeDataSet();
+            this.exchangeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.курсBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.курсTableAdapter = new Main.ExchangeDataSetTableAdapters.КурсTableAdapter();
+            this.курсBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -228,6 +237,8 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboBox1.DataSource = this.курсBindingSource1;
+            this.comboBox1.DisplayMember = "Название валюты";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
@@ -236,6 +247,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(61, 28);
             this.comboBox1.TabIndex = 19;
+            this.comboBox1.ValueMember = "Название валюты";
             // 
             // label15
             // 
@@ -366,6 +378,8 @@
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboBox2.DataSource = this.курсBindingSource2;
+            this.comboBox2.DisplayMember = "Название валюты";
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
@@ -374,10 +388,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(61, 28);
             this.comboBox2.TabIndex = 20;
-            // 
-            // курсBindingSource
-            // 
-            this.курсBindingSource.DataMember = "Курс";
+            this.comboBox2.ValueMember = "Название валюты";
             // 
             // textBox16
             // 
@@ -504,6 +515,10 @@
             this.label17.TabIndex = 19;
             this.label17.Text = "BYN";
             // 
+            // курсBindingSource
+            // 
+            this.курсBindingSource.DataMember = "Курс";
+            // 
             // button1
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
@@ -541,6 +556,30 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // exchangeDataSet
+            // 
+            this.exchangeDataSet.DataSetName = "ExchangeDataSet";
+            this.exchangeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // exchangeDataSetBindingSource
+            // 
+            this.exchangeDataSetBindingSource.DataSource = this.exchangeDataSet;
+            this.exchangeDataSetBindingSource.Position = 0;
+            // 
+            // курсBindingSource1
+            // 
+            this.курсBindingSource1.DataMember = "Курс";
+            this.курсBindingSource1.DataSource = this.exchangeDataSet;
+            // 
+            // курсTableAdapter
+            // 
+            this.курсTableAdapter.ClearBeforeFill = true;
+            // 
+            // курсBindingSource2
+            // 
+            this.курсBindingSource2.DataMember = "Курс";
+            this.курсBindingSource2.DataSource = this.exchangeDataSet;
+            // 
             // FormAdminExchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,6 +606,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -615,5 +658,10 @@
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.BindingSource exchangeDataSetBindingSource;
+        private ExchangeDataSet exchangeDataSet;
+        private System.Windows.Forms.BindingSource курсBindingSource1;
+        private ExchangeDataSetTableAdapters.КурсTableAdapter курсTableAdapter;
+        private System.Windows.Forms.BindingSource курсBindingSource2;
     }
 }

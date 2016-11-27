@@ -32,9 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPurchase));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.курсBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.курсBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.exchangeDataSet = new Main.ExchangeDataSet();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.курсBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -48,7 +50,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.курсTableAdapter = new Main.ExchangeDataSetTableAdapters.КурсTableAdapter();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,11 +74,24 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.курсBindingSource1;
+            this.comboBox1.DisplayMember = "Название валюты";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(14, 44);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(146, 32);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.ValueMember = "Название валюты";
+            // 
+            // курсBindingSource1
+            // 
+            this.курсBindingSource1.DataMember = "Курс";
+            this.курсBindingSource1.DataSource = this.exchangeDataSet;
+            // 
+            // exchangeDataSet
+            // 
+            this.exchangeDataSet.DataSetName = "ExchangeDataSet";
+            this.exchangeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label6
             // 
@@ -97,7 +115,7 @@
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.button4.Location = new System.Drawing.Point(602, 395);
+            this.button4.Location = new System.Drawing.Point(427, 395);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 32);
             this.button4.TabIndex = 17;
@@ -126,16 +144,18 @@
             // 
             // textBox4
             // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox4.Location = new System.Drawing.Point(170, 225);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(85, 29);
+            this.textBox4.Size = new System.Drawing.Size(135, 26);
             this.textBox4.TabIndex = 16;
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox1.Location = new System.Drawing.Point(170, 75);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(85, 29);
+            this.textBox1.Size = new System.Drawing.Size(135, 26);
             this.textBox1.TabIndex = 9;
             // 
             // label4
@@ -151,9 +171,10 @@
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox2.Location = new System.Drawing.Point(170, 121);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 29);
+            this.textBox2.Size = new System.Drawing.Size(135, 26);
             this.textBox2.TabIndex = 10;
             // 
             // label3
@@ -169,9 +190,10 @@
             // 
             // textBox3
             // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox3.Location = new System.Drawing.Point(170, 171);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(85, 29);
+            this.textBox3.Size = new System.Drawing.Size(135, 26);
             this.textBox3.TabIndex = 11;
             // 
             // label2
@@ -208,7 +230,7 @@
             // 
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.button2.Location = new System.Drawing.Point(445, 395);
+            this.button2.Location = new System.Drawing.Point(591, 395);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 32);
             this.button2.TabIndex = 13;
@@ -227,6 +249,10 @@
             this.button1.Text = "Выйти";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // курсTableAdapter
+            // 
+            this.курсTableAdapter.ClearBeforeFill = true;
             // 
             // FormPurchase
             // 
@@ -250,6 +276,8 @@
             this.Load += new System.EventHandler(this.Purchase_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -278,5 +306,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource курсBindingSource;
+        private ExchangeDataSet exchangeDataSet;
+        private System.Windows.Forms.BindingSource курсBindingSource1;
+        private ExchangeDataSetTableAdapters.КурсTableAdapter курсTableAdapter;
     }
 }

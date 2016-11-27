@@ -30,18 +30,17 @@ namespace Main.include.GUI
         private void button2_Click(object sender, EventArgs e)
         {
             Cashier cashier = new Cashier();
-            bool success = cashier.CashEnterToDB(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
-            if (!success)
+            string err = cashier.Registration(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            if (err == "1")
             {
-                  MessageBox.Show("Пожалуйста заполните все поля", "Error 4", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-            else
-            {
-
                 var result = MessageBox.Show("Регистрация прошла успешно", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 Hide();
                 formtoopen.ShowDialog();
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         
         }

@@ -197,8 +197,12 @@
   <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>569, 400</value>
+    <value>418, 400</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 32</value>
@@ -220,7 +224,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -301,6 +305,9 @@
   <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt</value>
   </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>733, 400</value>
   </data>
@@ -323,13 +330,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>55, 16</value>
@@ -353,7 +363,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="dateTimePicker2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -377,10 +387,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dateTimePicker2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="списокОперацийBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>163, 17</value>
+  </metadata>
+  <data name="кодDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Код</value>
+  </data>
+  <data name="фамилияКлиентаDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Фамилия клиента</value>
+  </data>
+  <data name="фамилияКассираDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Фамилия кассира</value>
+  </data>
+  <data name="датаDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="суммаПродажиDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Сумма продажи</value>
+  </data>
+  <data name="суммаПокупкиDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Сумма покупки</value>
+  </data>
+  <data name="валютаDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Валюта</value>
+  </data>
+  <data name="номерПаспортаDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Номер паспорта</value>
+  </data>
+  <metadata name="списокОперацийBindingSource6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>483, 173</value>
+  </metadata>
+  <metadata name="exchangeDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>485, 134</value>
   </metadata>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>26, 70</value>
@@ -407,8 +447,17 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
+  <metadata name="списокОперацийBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>413, 95</value>
+  </metadata>
+  <metadata name="exchangeDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>251, 56</value>
+  </metadata>
+  <metadata name="список_операцийBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>622, 56</value>
+  </metadata>
   <metadata name="списокОперацийBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
@@ -434,7 +483,143 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="exchangeDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>397, 56</value>
+  </metadata>
+  <metadata name="список_операцийTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>242, 95</value>
+  </metadata>
+  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        Ieu/sgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14pt</value>
+  </data>
+  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>584, 400</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 32</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Вывести</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <metadata name="списокОперацийBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <metadata name="списокОперацийBindingSource4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>251, 134</value>
+  </metadata>
+  <metadata name="списокОперацийBindingSource5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 173</value>
+  </metadata>
+  <metadata name="список_операцийTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>251, 173</value>
+  </metadata>
+  <data name="кодDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Код</value>
+  </data>
+  <data name="фамилияКлиентаDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Фамилия клиента</value>
+  </data>
+  <data name="Код.HeaderText" xml:space="preserve">
+    <value>Код</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -5366,7 +5551,6 @@
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>880, 495</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
@@ -5379,11 +5563,149 @@
   <data name="&gt;&gt;списокОперацийBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;списокОперацийBindingSource2.Name" xml:space="preserve">
+    <value>списокОперацийBindingSource2</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exchangeDataSet.Name" xml:space="preserve">
+    <value>exchangeDataSet</value>
+  </data>
+  <data name="&gt;&gt;exchangeDataSet.Type" xml:space="preserve">
+    <value>Main.ExchangeDataSet, ExchangeDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;список_операцийBindingSource.Name" xml:space="preserve">
+    <value>список_операцийBindingSource</value>
+  </data>
+  <data name="&gt;&gt;список_операцийBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;списокОперацийBindingSource1.Name" xml:space="preserve">
     <value>списокОперацийBindingSource1</value>
   </data>
   <data name="&gt;&gt;списокОперацийBindingSource1.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exchangeDataSetBindingSource.Name" xml:space="preserve">
+    <value>exchangeDataSetBindingSource</value>
+  </data>
+  <data name="&gt;&gt;exchangeDataSetBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;список_операцийTableAdapter.Name" xml:space="preserve">
+    <value>список_операцийTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;список_операцийTableAdapter.Type" xml:space="preserve">
+    <value>Main.ExchangeDataSetTableAdapters.Список_операцийTableAdapter, ExchangeDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tableAdapterManager.Name" xml:space="preserve">
+    <value>tableAdapterManager</value>
+  </data>
+  <data name="&gt;&gt;tableAdapterManager.Type" xml:space="preserve">
+    <value>Main.ExchangeDataSetTableAdapters.TableAdapterManager, ExchangeDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource3.Name" xml:space="preserve">
+    <value>списокОперацийBindingSource3</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource4.Name" xml:space="preserve">
+    <value>списокОперацийBindingSource4</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exchangeDataSet1.Name" xml:space="preserve">
+    <value>exchangeDataSet1</value>
+  </data>
+  <data name="&gt;&gt;exchangeDataSet1.Type" xml:space="preserve">
+    <value>Main.ExchangeDataSet1, ExchangeDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource5.Name" xml:space="preserve">
+    <value>списокОперацийBindingSource5</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;список_операцийTableAdapter1.Name" xml:space="preserve">
+    <value>список_операцийTableAdapter1</value>
+  </data>
+  <data name="&gt;&gt;список_операцийTableAdapter1.Type" xml:space="preserve">
+    <value>Main.ExchangeDataSet1TableAdapters.Список_операцийTableAdapter, ExchangeDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;кодDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>кодDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;кодDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;фамилияКлиентаDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>фамилияКлиентаDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;фамилияКлиентаDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Код.Name" xml:space="preserve">
+    <value>Код</value>
+  </data>
+  <data name="&gt;&gt;Код.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource6.Name" xml:space="preserve">
+    <value>списокОперацийBindingSource6</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;кодDataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>кодDataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;кодDataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;фамилияКлиентаDataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>фамилияКлиентаDataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;фамилияКлиентаDataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;фамилияКассираDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>фамилияКассираDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;фамилияКассираDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;датаDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>датаDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;датаDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;суммаПродажиDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>суммаПродажиDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;суммаПродажиDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;суммаПокупкиDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>суммаПокупкиDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;суммаПокупкиDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;валютаDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>валютаDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;валютаDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;номерПаспортаDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>номерПаспортаDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;номерПаспортаDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormStat</value>
