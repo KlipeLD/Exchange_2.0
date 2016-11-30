@@ -19,5 +19,5 @@ D:\BSU\Лабы прога\Технологии программирования
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Release\MainDLL.pdb
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\obj\Release\Main.exe
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\obj\Release\Main.pdb
-D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Release\MainDLL.dll
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Release\Exchange.mdb
+D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Release\MainDLL.dll

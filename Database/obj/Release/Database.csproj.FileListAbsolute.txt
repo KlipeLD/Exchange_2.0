@@ -1,0 +1,4 @@
+D:\BSU\Лабы прога\Технологии программирования\Main\Database\bin\Release\Database.dll
+D:\BSU\Лабы прога\Технологии программирования\Main\Database\bin\Release\Database.pdb
+D:\BSU\Лабы прога\Технологии программирования\Main\Database\obj\Release\Database.dll
+D:\BSU\Лабы прога\Технологии программирования\Main\Database\obj\Release\Database.pdb

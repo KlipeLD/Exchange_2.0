@@ -69,7 +69,8 @@ namespace Main.include.GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Cashier cashier = new Cashier();
+            textBox2.Text = cashier.ConversOperation(comboBox1.Text, comboBox2.Text, textBox1.Text);
         }
     }
 }

@@ -392,38 +392,8 @@
   <metadata name="списокОперацийBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>163, 17</value>
   </metadata>
-  <data name="кодDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Код</value>
-  </data>
-  <data name="фамилияКлиентаDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Фамилия клиента</value>
-  </data>
-  <data name="фамилияКассираDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Фамилия кассира</value>
-  </data>
-  <data name="датаDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Дата</value>
-  </data>
-  <data name="суммаПродажиDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Сумма продажи</value>
-  </data>
-  <data name="суммаПокупкиDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Сумма покупки</value>
-  </data>
-  <data name="валютаDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Валюта</value>
-  </data>
-  <data name="номерПаспортаDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Номер паспорта</value>
-  </data>
-  <metadata name="списокОперацийBindingSource6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>483, 173</value>
-  </metadata>
-  <metadata name="exchangeDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>485, 134</value>
-  </metadata>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 70</value>
+    <value>15, 67</value>
   </data>
   <data name="dataGridView1.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>811, 306</value>
@@ -449,11 +419,17 @@
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="списокОперацийBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>413, 95</value>
+  <metadata name="списокОперацийBindingSource7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 212</value>
   </metadata>
   <metadata name="exchangeDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>251, 56</value>
+  </metadata>
+  <metadata name="списокОперацийBindingSource6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>483, 173</value>
+  </metadata>
+  <metadata name="списокОперацийBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>413, 95</value>
   </metadata>
   <metadata name="список_операцийBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>622, 56</value>
@@ -609,9 +585,6 @@
   <metadata name="списокОперацийBindingSource5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 173</value>
   </metadata>
-  <metadata name="список_операцийTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>251, 173</value>
-  </metadata>
   <data name="кодDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Код</value>
   </data>
@@ -621,6 +594,15 @@
   <data name="Код.HeaderText" xml:space="preserve">
     <value>Код</value>
   </data>
+  <metadata name="exchangeDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>251, 212</value>
+  </metadata>
+  <metadata name="списокОперацийBindingSource8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>404, 212</value>
+  </metadata>
+  <metadata name="список_операцийTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 251</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -5563,10 +5545,10 @@
   <data name="&gt;&gt;списокОперацийBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;списокОперацийBindingSource2.Name" xml:space="preserve">
-    <value>списокОперацийBindingSource2</value>
+  <data name="&gt;&gt;списокОперацийBindingSource7.Name" xml:space="preserve">
+    <value>списокОперацийBindingSource7</value>
   </data>
-  <data name="&gt;&gt;списокОперацийBindingSource2.Type" xml:space="preserve">
+  <data name="&gt;&gt;списокОперацийBindingSource7.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;exchangeDataSet.Name" xml:space="preserve">
@@ -5574,6 +5556,18 @@
   </data>
   <data name="&gt;&gt;exchangeDataSet.Type" xml:space="preserve">
     <value>Main.ExchangeDataSet, ExchangeDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource6.Name" xml:space="preserve">
+    <value>списокОперацийBindingSource6</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource2.Name" xml:space="preserve">
+    <value>списокОперацийBindingSource2</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;список_операцийBindingSource.Name" xml:space="preserve">
     <value>список_операцийBindingSource</value>
@@ -5617,23 +5611,11 @@
   <data name="&gt;&gt;списокОперацийBindingSource4.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;exchangeDataSet1.Name" xml:space="preserve">
-    <value>exchangeDataSet1</value>
-  </data>
-  <data name="&gt;&gt;exchangeDataSet1.Type" xml:space="preserve">
-    <value>Main.ExchangeDataSet1, ExchangeDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;списокОперацийBindingSource5.Name" xml:space="preserve">
     <value>списокОперацийBindingSource5</value>
   </data>
   <data name="&gt;&gt;списокОперацийBindingSource5.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;список_операцийTableAdapter1.Name" xml:space="preserve">
-    <value>список_операцийTableAdapter1</value>
-  </data>
-  <data name="&gt;&gt;список_операцийTableAdapter1.Type" xml:space="preserve">
-    <value>Main.ExchangeDataSet1TableAdapters.Список_операцийTableAdapter, ExchangeDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;кодDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>кодDataGridViewTextBoxColumn</value>
@@ -5653,59 +5635,23 @@
   <data name="&gt;&gt;Код.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;списокОперацийBindingSource6.Name" xml:space="preserve">
-    <value>списокОперацийBindingSource6</value>
+  <data name="&gt;&gt;exchangeDataSet1.Name" xml:space="preserve">
+    <value>exchangeDataSet1</value>
   </data>
-  <data name="&gt;&gt;списокОперацийBindingSource6.Type" xml:space="preserve">
+  <data name="&gt;&gt;exchangeDataSet1.Type" xml:space="preserve">
+    <value>Main.ExchangeDataSet1, ExchangeDataSet11.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource8.Name" xml:space="preserve">
+    <value>списокОперацийBindingSource8</value>
+  </data>
+  <data name="&gt;&gt;списокОперацийBindingSource8.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;кодDataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>кодDataGridViewTextBoxColumn1</value>
+  <data name="&gt;&gt;список_операцийTableAdapter1.Name" xml:space="preserve">
+    <value>список_операцийTableAdapter1</value>
   </data>
-  <data name="&gt;&gt;кодDataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;фамилияКлиентаDataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>фамилияКлиентаDataGridViewTextBoxColumn1</value>
-  </data>
-  <data name="&gt;&gt;фамилияКлиентаDataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;фамилияКассираDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>фамилияКассираDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;фамилияКассираDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;датаDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>датаDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;датаDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;суммаПродажиDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>суммаПродажиDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;суммаПродажиDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;суммаПокупкиDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>суммаПокупкиDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;суммаПокупкиDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;валютаDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>валютаDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;валютаDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;номерПаспортаDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>номерПаспортаDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;номерПаспортаDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;список_операцийTableAdapter1.Type" xml:space="preserve">
+    <value>Main.ExchangeDataSet1TableAdapters.Список_операцийTableAdapter, ExchangeDataSet11.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormStat</value>

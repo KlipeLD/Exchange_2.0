@@ -38,8 +38,10 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.списокОперацийBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.списокОперацийBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.списокОперацийBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.exchangeDataSet = new Main.ExchangeDataSet();
+            this.списокОперацийBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.списокОперацийBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.список_операцийBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.списокОперацийBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -49,33 +51,27 @@
             this.button2 = new System.Windows.Forms.Button();
             this.списокОперацийBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.списокОперацийBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.exchangeDataSet1 = new Main.ExchangeDataSet1();
             this.списокОперацийBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.список_операцийTableAdapter1 = new Main.ExchangeDataSet1TableAdapters.Список_операцийTableAdapter();
             this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.фамилияКлиентаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Код = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.списокОперацийBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.кодDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фамилияКлиентаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фамилияКассираDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.суммаПродажиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.суммаПокупкиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.валютаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.номерПаспортаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exchangeDataSet1 = new Main.ExchangeDataSet1();
+            this.списокОперацийBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
+            this.список_операцийTableAdapter1 = new Main.ExchangeDataSet1TableAdapters.Список_операцийTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.список_операцийBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource8)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -120,33 +116,27 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.кодDataGridViewTextBoxColumn1,
-            this.фамилияКлиентаDataGridViewTextBoxColumn1,
-            this.фамилияКассираDataGridViewTextBoxColumn,
-            this.датаDataGridViewTextBoxColumn,
-            this.суммаПродажиDataGridViewTextBoxColumn,
-            this.суммаПокупкиDataGridViewTextBoxColumn,
-            this.валютаDataGridViewTextBoxColumn,
-            this.номерПаспортаDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.списокОперацийBindingSource6;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // списокОперацийBindingSource2
+            // списокОперацийBindingSource7
             // 
-            this.списокОперацийBindingSource2.DataMember = "Список операций";
-            this.списокОперацийBindingSource2.DataSource = this.exchangeDataSet;
+            this.списокОперацийBindingSource7.DataMember = "Список операций";
+            this.списокОперацийBindingSource7.DataSource = this.exchangeDataSet;
             // 
             // exchangeDataSet
             // 
             this.exchangeDataSet.DataSetName = "ExchangeDataSet";
             this.exchangeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // списокОперацийBindingSource2
+            // 
+            this.списокОперацийBindingSource2.DataMember = "Список операций";
+            this.списокОперацийBindingSource2.DataSource = this.exchangeDataSet;
             // 
             // список_операцийBindingSource
             // 
@@ -195,20 +185,6 @@
             this.списокОперацийBindingSource4.DataMember = "Список операций";
             this.списокОперацийBindingSource4.DataSource = this.exchangeDataSet;
             // 
-            // exchangeDataSet1
-            // 
-            this.exchangeDataSet1.DataSetName = "ExchangeDataSet1";
-            this.exchangeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // списокОперацийBindingSource5
-            // 
-            this.списокОперацийBindingSource5.DataMember = "Список операций";
-            this.списокОперацийBindingSource5.DataSource = this.exchangeDataSet1;
-            // 
-            // список_операцийTableAdapter1
-            // 
-            this.список_операцийTableAdapter1.ClearBeforeFill = true;
-            // 
             // кодDataGridViewTextBoxColumn
             // 
             this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
@@ -228,73 +204,19 @@
             resources.ApplyResources(this.Код, "Код");
             this.Код.Name = "Код";
             // 
-            // списокОперацийBindingSource6
+            // exchangeDataSet1
             // 
-            this.списокОперацийBindingSource6.DataMember = "Список операций";
-            this.списокОперацийBindingSource6.DataSource = this.exchangeDataSet1;
+            this.exchangeDataSet1.DataSetName = "ExchangeDataSet1";
+            this.exchangeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // кодDataGridViewTextBoxColumn1
+            // списокОперацийBindingSource8
             // 
-            this.кодDataGridViewTextBoxColumn1.DataPropertyName = "Код";
-            resources.ApplyResources(this.кодDataGridViewTextBoxColumn1, "кодDataGridViewTextBoxColumn1");
-            this.кодDataGridViewTextBoxColumn1.Name = "кодDataGridViewTextBoxColumn1";
-            this.кодDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.списокОперацийBindingSource8.DataMember = "Список операций";
+            this.списокОперацийBindingSource8.DataSource = this.exchangeDataSet1;
             // 
-            // фамилияКлиентаDataGridViewTextBoxColumn1
+            // список_операцийTableAdapter1
             // 
-            this.фамилияКлиентаDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.фамилияКлиентаDataGridViewTextBoxColumn1.DataPropertyName = "Фамилия клиента";
-            resources.ApplyResources(this.фамилияКлиентаDataGridViewTextBoxColumn1, "фамилияКлиентаDataGridViewTextBoxColumn1");
-            this.фамилияКлиентаDataGridViewTextBoxColumn1.Name = "фамилияКлиентаDataGridViewTextBoxColumn1";
-            this.фамилияКлиентаDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // фамилияКассираDataGridViewTextBoxColumn
-            // 
-            this.фамилияКассираDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.фамилияКассираDataGridViewTextBoxColumn.DataPropertyName = "Фамилия кассира";
-            resources.ApplyResources(this.фамилияКассираDataGridViewTextBoxColumn, "фамилияКассираDataGridViewTextBoxColumn");
-            this.фамилияКассираDataGridViewTextBoxColumn.Name = "фамилияКассираDataGridViewTextBoxColumn";
-            this.фамилияКассираDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // датаDataGridViewTextBoxColumn
-            // 
-            this.датаDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.датаDataGridViewTextBoxColumn.DataPropertyName = "Дата";
-            resources.ApplyResources(this.датаDataGridViewTextBoxColumn, "датаDataGridViewTextBoxColumn");
-            this.датаDataGridViewTextBoxColumn.Name = "датаDataGridViewTextBoxColumn";
-            this.датаDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // суммаПродажиDataGridViewTextBoxColumn
-            // 
-            this.суммаПродажиDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.суммаПродажиDataGridViewTextBoxColumn.DataPropertyName = "Сумма продажи";
-            resources.ApplyResources(this.суммаПродажиDataGridViewTextBoxColumn, "суммаПродажиDataGridViewTextBoxColumn");
-            this.суммаПродажиDataGridViewTextBoxColumn.Name = "суммаПродажиDataGridViewTextBoxColumn";
-            this.суммаПродажиDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // суммаПокупкиDataGridViewTextBoxColumn
-            // 
-            this.суммаПокупкиDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.суммаПокупкиDataGridViewTextBoxColumn.DataPropertyName = "Сумма покупки";
-            resources.ApplyResources(this.суммаПокупкиDataGridViewTextBoxColumn, "суммаПокупкиDataGridViewTextBoxColumn");
-            this.суммаПокупкиDataGridViewTextBoxColumn.Name = "суммаПокупкиDataGridViewTextBoxColumn";
-            this.суммаПокупкиDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // валютаDataGridViewTextBoxColumn
-            // 
-            this.валютаDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.валютаDataGridViewTextBoxColumn.DataPropertyName = "Валюта";
-            resources.ApplyResources(this.валютаDataGridViewTextBoxColumn, "валютаDataGridViewTextBoxColumn");
-            this.валютаDataGridViewTextBoxColumn.Name = "валютаDataGridViewTextBoxColumn";
-            this.валютаDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // номерПаспортаDataGridViewTextBoxColumn
-            // 
-            this.номерПаспортаDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.номерПаспортаDataGridViewTextBoxColumn.DataPropertyName = "Номер паспорта";
-            resources.ApplyResources(this.номерПаспортаDataGridViewTextBoxColumn, "номерПаспортаDataGridViewTextBoxColumn");
-            this.номерПаспортаDataGridViewTextBoxColumn.Name = "номерПаспортаDataGridViewTextBoxColumn";
-            this.номерПаспортаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.список_операцийTableAdapter1.ClearBeforeFill = true;
             // 
             // FormStat
             // 
@@ -313,16 +235,18 @@
             this.Load += new System.EventHandler(this.Stat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.список_операцийBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.списокОперацийBindingSource8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,20 +271,22 @@
         private System.Windows.Forms.BindingSource списокОперацийBindingSource2;
         private System.Windows.Forms.BindingSource списокОперацийBindingSource4;
         private System.Windows.Forms.BindingSource списокОперацийBindingSource3;
-        private ExchangeDataSet1 exchangeDataSet1;
         private System.Windows.Forms.BindingSource списокОперацийBindingSource5;
-        private ExchangeDataSet1TableAdapters.Список_операцийTableAdapter список_операцийTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn фамилияКлиентаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Код;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn фамилияКлиентаDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn фамилияКассираDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn датаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn суммаПродажиDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn суммаПокупкиDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn валютаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn номерПаспортаDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource списокОперацийBindingSource6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sNameClient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fNameCashier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sale;
+        private System.Windows.Forms.DataGridViewTextBoxColumn purchase;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passport;
+        private System.Windows.Forms.BindingSource списокОперацийBindingSource7;
+        private ExchangeDataSet1 exchangeDataSet1;
+        private System.Windows.Forms.BindingSource списокОперацийBindingSource8;
+        private ExchangeDataSet1TableAdapters.Список_операцийTableAdapter список_операцийTableAdapter1;
     }
 }

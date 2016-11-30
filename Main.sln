@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainDLL", "MainDLL\MainDLL.csproj", "{53620639-BDBB-43A3-A1C0-820D830E7EC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseDLL", "Database\DatabaseDLL.csproj", "{6B23011D-73EB-4995-8D21-D03C7AF90A94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{53620639-BDBB-43A3-A1C0-820D830E7EC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53620639-BDBB-43A3-A1C0-820D830E7EC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53620639-BDBB-43A3-A1C0-820D830E7EC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B23011D-73EB-4995-8D21-D03C7AF90A94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B23011D-73EB-4995-8D21-D03C7AF90A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B23011D-73EB-4995-8D21-D03C7AF90A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B23011D-73EB-4995-8D21-D03C7AF90A94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

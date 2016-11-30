@@ -20,4 +20,3 @@ D:\BSU\Лабы прога\Технологии программирования
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\obj\Debug\Main.exe
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\obj\Debug\Main.pdb
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Debug\MainDLL.dll
-D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Debug\Exchange.mdb

@@ -14,20 +14,32 @@ using MainDLL;
 namespace Main.include.GUI
 {
     public partial class FormAdminExchange : Form
-    { 
+    {
+        Admin admin = new Admin();
         ExMessage message = new ExMessage();
         FormAdminOption formtoopen = new FormAdminOption();
         public FormAdminExchange()
         {
             InitializeComponent();
-            Admin admin = new Admin();
-           // List<string> arr = admin.ReadFromDB();                
+            List<string> data = new List<string>();
+            data.AddRange(admin.CurrencyOperation());
+            int countArr = data.Count;
+            countArr /= 2;   //половина покупка, половина продажа
+            //покупка
+            textBox6.Text = textBox12.Text = data[0];
+            textBox8.Text = textBox10.Text = data[1];
+            textBox14.Text = textBox4.Text = data[2];
+            textBox2.Text = textBox16.Text = data[3];
+            //продажа
+            textBox5.Text = textBox11.Text = data[countArr];
+            textBox7.Text = textBox9.Text = data[countArr+1];
+            textBox13.Text = textBox3.Text = data[countArr+2];
+            textBox1.Text = textBox15.Text = data[countArr+3];
         }
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -94,6 +106,26 @@ namespace Main.include.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
+            List<string> newZnachP = new List<string>(); //Purchase
+            newZnachP.Add(textBox12.Text);
+            newZnachP.Add(textBox10.Text);
+            newZnachP.Add(textBox4.Text);
+            newZnachP.Add(textBox16.Text);
+            //
+            List<string> newZnachS = new List<string>(); //Sale
+            newZnachP.Add(textBox11.Text);
+            newZnachP.Add(textBox9.Text);
+            newZnachP.Add(textBox3.Text);
+            newZnachP.Add(textBox15.Text);
+            //
+            admin.UpdateCurrency(newZnachP, newZnachS);
+            textBox6.Text = textBox12.Text;
+            textBox5.Text = textBox11.Text;
+            textBox8.Text = textBox10.Text;
+            textBox7.Text = textBox9.Text;
+            textBox14.Text = textBox4.Text;
+            textBox13.Text = textBox3.Text;
+            admin.UpdateCurrencyCBox(textBox16.Text, textBox15.Text, comboBox2.Text);
 
         }
 
@@ -219,6 +251,24 @@ namespace Main.include.GUI
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<string> textBox = new List<string>();
+            string cb1=comboBox1.Text;
+            textBox = admin.CurrChangeOp(cb1);
+            textBox2.Text = textBox[0];
+            textBox1.Text = textBox[1];
+        }
+        
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            List<string> textBoxx = new List<string>();
+            string cb2 = comboBox2.Text;
+            textBoxx = admin.CurrChangeOp(cb2);
+            textBox16.Text = textBoxx[0];
+            textBox15.Text = textBoxx[1];
         }
     }
 }

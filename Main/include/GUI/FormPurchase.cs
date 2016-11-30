@@ -31,7 +31,7 @@ namespace Main.include.GUI
         {
             Cashier cashier = new Cashier();
             string err;
-            err = cashier.SaleOperation(textBox1.Text, textBox4.Text, textBox5.Text, comboBox1.Text);
+            err = cashier.PurchaseOperation(textBox1.Text, textBox4.Text, textBox5.Text, comboBox1.Text);
 
             if (err == "1")
             {

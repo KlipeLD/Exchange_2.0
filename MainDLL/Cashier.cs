@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DatabaseDLL;
 
 namespace MainDLL
 {
@@ -11,10 +11,10 @@ namespace MainDLL
     public class Cashier
     {
         Database db = new Database();
-        public string nameCashier { get; set; }
+        public string NameCashier { get; set; }
         public string PurchaseOperation(string surnameClient, string passport, string sum, string currency)
         {
-            
+
             List<string> col = new List<string>();
             List<string> val = new List<string>();
             string err = "0";
@@ -29,7 +29,7 @@ namespace MainDLL
                 //
                 val.Add(surnameClient);
                 val.Add(passport);
-                val.Add(nameCashier);
+                val.Add(this.NameCashier);
                 val.Add(DateTime.Now.ToString());
                 val.Add(sum);
                 val.Add(currency);
@@ -63,7 +63,7 @@ namespace MainDLL
                 //
                 val.Add(surnameClient);
                 val.Add(passport);
-                val.Add(nameCashier);
+                val.Add(this.NameCashier);
                 val.Add(DateTime.Today.ToString());
                 val.Add(sum);
                 val.Add(currency);
@@ -71,7 +71,7 @@ namespace MainDLL
                 //   err = db.CheckDB("Кассир", col[0], val[0]);
                 // if (err == "1")
                 // {
-                    db.EnterToDB("Список операций", col, val);
+                db.EnterToDB("Список операций", col, val);
                 // }
                 err = "1";
             }
@@ -85,10 +85,10 @@ namespace MainDLL
         {
             List<string> col = new List<string>();
             List<string> val = new List<string>();
-            string err ="0";
+            string err = "0";
             if (surname != "" && name != "" && fname != "")
             {
-                nameCashier = surname;
+                this.NameCashier = surname;
                 col.Add("Фамилия");
                 col.Add("Имя");
                 col.Add("Отчество");
@@ -96,7 +96,7 @@ namespace MainDLL
                 val.Add(surname);
                 val.Add(name);
                 val.Add(fname);
-                err = db.CheckDB("Кассир",col[0],val[0]);
+                err = db.CheckDB("Кассир", col[0], val[0]);
                 if (err == "1")
                 {
                     db.EnterToDB("Кассир", col, val);
@@ -105,7 +105,7 @@ namespace MainDLL
             }
             else
             {
-                err ="Пожалуйста, заполните все поля и повторите запрос снова.";
+                err = "Пожалуйста, заполните все поля и повторите запрос снова.";
             }
             return err;
         }
@@ -114,7 +114,7 @@ namespace MainDLL
             List<string> col = new List<string>();
             List<string> val = new List<string>();
             string err;
-            if (surname != "" && name != "" && fname != "" && passport != "" )
+            if (surname != "" && name != "" && fname != "" && passport != "")
             {
                 col.Add("Фамилия");
                 col.Add("Имя");
@@ -140,6 +140,19 @@ namespace MainDLL
                 err = "Пожалуйста, заполните все поля и повторите запрос";
             }
             return err;
+        }
+        public string ConversOperation(string curFrom, string curTo, string boxData)
+        {
+            string znach = "";
+            Double dataF; Double dataT; Double data;
+            znach = db.ReadData("Курс", "Продажа", "Название валюты", curFrom);
+            dataF = Convert.ToDouble(znach);
+            znach = db.ReadData("Курс", "Продажа", "Название валюты", curTo);
+            dataT = Convert.ToDouble(znach);
+            data = Convert.ToDouble(boxData);
+            data = data / dataF * dataT;
+            znach = data.ToString();
+            return znach;
         }
     }
 }
