@@ -147,7 +147,7 @@ namespace MainDLL
             Double dataF; Double dataT; Double data;
             znach = db.ReadData("Курс", "Продажа", "Название валюты", curFrom);
             dataF = Convert.ToDouble(znach);
-            znach = db.ReadData("Курс", "Продажа", "Название валюты", curTo);
+            znach = db.ReadData("Курс", "Покупка", "Название валюты", curTo);
             dataT = Convert.ToDouble(znach);
             data = Convert.ToDouble(boxData);
             data = data / dataF * dataT;
