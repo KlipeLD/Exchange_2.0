@@ -60,7 +60,9 @@
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Admin.cs" />
+    <Compile Include="Bank.cs" />
     <Compile Include="Cashier.cs" />
+    <Compile Include="Printer.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="ADODB">

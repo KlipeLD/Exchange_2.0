@@ -14,10 +14,9 @@ namespace MainDLL
         public string NameCashier { get; set; }
         public string PurchaseOperation(string surnameClient, string passport, string sum, string currency)
         {
-
             List<string> col = new List<string>();
             List<string> val = new List<string>();
-            string err = "0";
+            string err;
             if (surnameClient != "" && passport != "" && sum != "" && currency != "")
             {
                 col.Add("Фамилия клиента");
@@ -29,17 +28,42 @@ namespace MainDLL
                 //
                 val.Add(surnameClient);
                 val.Add(passport);
-                val.Add(this.NameCashier);
-                val.Add(DateTime.Now.ToString());
+                val.Add(NameCashier);
+                val.Add(DateTime.Today.ToString());
                 val.Add(sum);
                 val.Add(currency);
-                //
-                //   err = db.CheckDB("Кассир", col[0], val[0]);
-                // if (err == "1")
-                // {
-                db.EnterToDB("Список операций", col, val);
-                // }
-                err = "1";
+                err = db.CheckDB("Клиент", col[1], val[1]);
+                if (err == "0")
+                {
+                    string dataFromDb; Double dData1, dData2; string dataFromForm;
+                    dataFromDb = db.ReturnZnach("Клиент", "Номер паспорта", passport, "Сумма покупки");
+                    dataFromForm = ConversOperation(currency, "BYN", sum);
+                    dData1 = Convert.ToDouble(dataFromDb);
+                    dData2 = Convert.ToDouble(dataFromForm);
+                    dData2 = dData1 + dData2;
+                    if (dData2 > 1000)
+                    {
+                        err = "Данный клиент превысил лимит операций на сегодня.";
+                    }
+                    else
+                    {
+                        try
+                        {
+                            db.EnterToDB("Список операций", col, val);
+                            err = "1";
+                            db.UpdateDBOne("Клиент", "Сумма покупки", dData2.ToString(),
+                            "Номер паспорта", passport);
+                        }
+                        catch (Exception e)
+                        {
+                            err = e.Source;
+                        }
+                    }
+                }
+                else
+                {
+                    err = "Данного клиента нет в базе данных.";
+                }
             }
             else
             {
@@ -51,7 +75,7 @@ namespace MainDLL
         {
             List<string> col = new List<string>();
             List<string> val = new List<string>();
-            string err = "0";
+            string err;
             if (surnameClient != "" && passport != "" && sum != "" && currency != "")
             {
                 col.Add("Фамилия клиента");
@@ -63,45 +87,35 @@ namespace MainDLL
                 //
                 val.Add(surnameClient);
                 val.Add(passport);
-                val.Add(this.NameCashier);
+                val.Add(NameCashier);
                 val.Add(DateTime.Today.ToString());
                 val.Add(sum);
                 val.Add(currency);
-                //
-                //   err = db.CheckDB("Кассир", col[0], val[0]);
-                // if (err == "1")
-                // {
-                db.EnterToDB("Список операций", col, val);
-                // }
-                err = "1";
-            }
-            else
-            {
-                err = "Пожалуйста, заполните все поля и повторите запрос снова.";
-            }
-            return err;
-        }
-        public string CashEnter(string surname, string name, string fname)
-        {
-            List<string> col = new List<string>();
-            List<string> val = new List<string>();
-            string err = "0";
-            if (surname != "" && name != "" && fname != "")
-            {
-                this.NameCashier = surname;
-                col.Add("Фамилия");
-                col.Add("Имя");
-                col.Add("Отчество");
-                //
-                val.Add(surname);
-                val.Add(name);
-                val.Add(fname);
-                err = db.CheckDB("Кассир", col[0], val[0]);
-                if (err == "1")
+                err = db.CheckDB("Клиент", col[1], val[1]);
+                if (err == "0")
                 {
-                    db.EnterToDB("Кассир", col, val);
+                    string dataFromDb; Double dData1, dData2; string dataFromForm;
+                    dataFromDb = db.ReturnZnach("Клиент", "Номер паспорта", passport, "Сумма продажи");
+                    dataFromForm = ConversOperation(currency, "BYN", sum);
+                    dData1 = Convert.ToDouble(dataFromDb);
+                    dData2 = Convert.ToDouble(dataFromForm);
+                    dData2 = dData1 + dData2;
+                    if (dData2 > 1000)
+                    {
+                        err = "Данный клиент превысил лимит операций на сегодня.";
+                    }
+                    else
+                    {
+                            db.EnterToDB("Список операций", col, val);
+                            err = "1";
+                            db.UpdateDBOne("Клиент","Сумма продажи", dData2.ToString(),
+                            "Номер паспорта", passport);
+                    }
                 }
-                err = "1";
+                else
+                {
+                    err = "Данного клиента нет в базе данных.";
+                }
             }
             else
             {
@@ -109,6 +123,7 @@ namespace MainDLL
             }
             return err;
         }
+
         public string Registration(string surname, string name, string fname, string passport)
         {
             List<string> col = new List<string>();
@@ -150,7 +165,7 @@ namespace MainDLL
             znach = db.ReadData("Курс", "Покупка", "Название валюты", curTo);
             dataT = Convert.ToDouble(znach);
             data = Convert.ToDouble(boxData);
-            data = data / dataF * dataT;
+            data = data * dataF / dataT;
             znach = data.ToString();
             return znach;
         }

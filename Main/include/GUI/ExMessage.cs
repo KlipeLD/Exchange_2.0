@@ -36,5 +36,9 @@ namespace Main.include.GUI
         {
             MessageBox.Show(text,heading, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
+        public void MessageErr(string text)
+        {
+            MessageBox.Show("Упс..Что-то пошло не так...\nТекст ошибки:\n" +text, "Error :(", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

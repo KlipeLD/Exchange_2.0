@@ -29,20 +29,26 @@ namespace Main.include.GUI
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Cashier cashier = new Cashier();
-            string err = cashier.Registration(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
-            if (err == "1")
+            try
             {
-                var result = MessageBox.Show("Регистрация прошла успешно", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                Hide();
-                formtoopen.ShowDialog();
-                this.Close();
+                Cashier cashier = new Cashier();
+                string err = cashier.Registration(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+                if (err == "1")
+                {
+                    var result = MessageBox.Show("Регистрация прошла успешно", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Hide();
+                    formtoopen.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
             }
-            else
+            catch (Exception t)
             {
-                MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                message.MessageErr(t.Message);
             }
-        
         }
         private void button1_Click(object sender, EventArgs e)
         {

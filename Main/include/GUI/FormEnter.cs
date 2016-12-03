@@ -26,25 +26,32 @@ namespace Main.include.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
-            {
-                Hide();
-                FormAdminOption formAdmin = new FormAdminOption();
-                formAdmin.ShowDialog();
-                Close();
+            //try
+            //{
+                if (radioButton1.Checked)
+                {
+                    Hide();
+                    FormAdminOption formAdmin = new FormAdminOption();
+                    formAdmin.ShowDialog();
+                    Close();
 
-            }
-            else if (radioButton2.Checked)
-            {
-                Hide();
-                FormCashier formStat = new FormCashier();
-                formStat.ShowDialog();
-                Close();
-            }
-            else
-            {
-                message.MessageOk("Необходимо выбрать хотя бы 1 из пунктов", "Error 1");
-            }
+                }
+                else if (radioButton2.Checked)
+                {
+                    Hide();
+                    FormCashier formStat = new FormCashier();
+                    formStat.ShowDialog();
+                    Close();
+                }
+                else
+                {
+                    message.MessageOk("Необходимо выбрать хотя бы 1 из пунктов", "Error 1");
+                }
+            //}
+           // catch (Exception t)
+           // {
+           //     message.MessageErr(t.Message);
+           // }
         }
 
         private void button1_Click(object sender, EventArgs e)

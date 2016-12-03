@@ -21,26 +21,29 @@ namespace Main.include.GUI
         public FormAdminExchange()
         {
             InitializeComponent();
-            List<string> data = new List<string>();
-            data.AddRange(admin.CurrencyOperation());
-            int countArr = data.Count;
-            countArr /= 2;   //половина покупка, половина продажа
-            //покупка
-            textBox6.Text = textBox12.Text = data[0];
-            textBox8.Text = textBox10.Text = data[1];
-            textBox14.Text = textBox4.Text = data[2];
-            textBox2.Text = textBox16.Text = data[3];
-            //продажа
-            textBox5.Text = textBox11.Text = data[countArr];
-            textBox7.Text = textBox9.Text = data[countArr+1];
-            textBox13.Text = textBox3.Text = data[countArr+2];
-            textBox1.Text = textBox15.Text = data[countArr+3];
+            try
+            {
+                List<string> data = new List<string>();
+                data.AddRange(admin.CurrencyOperation());
+                int countArr = data.Count;
+                countArr = (countArr + 1) / 2;   //половина покупка, половина продажа
+                                                 //покупка
+                textBox6.Text = textBox12.Text = data[0];
+                textBox8.Text = textBox10.Text = data[1];
+                textBox14.Text = textBox4.Text = data[2];
+                textBox2.Text = textBox16.Text = data[0];
+                //продажа
+                textBox5.Text = textBox11.Text = data[countArr];
+                textBox7.Text = textBox9.Text = data[countArr + 1];
+                textBox13.Text = textBox3.Text = data[countArr + 2];
+                textBox1.Text = textBox15.Text = data[countArr];
+            }
+            catch (Exception t)
+            {
+                message.MessageErr(t.Message);
+            }
         }
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label2_Click(object sender, EventArgs e)
         {
 
         }
@@ -106,27 +109,34 @@ namespace Main.include.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<string> newZnachP = new List<string>(); //Purchase
-            newZnachP.Add(textBox12.Text);
-            newZnachP.Add(textBox10.Text);
-            newZnachP.Add(textBox4.Text);
-            newZnachP.Add(textBox16.Text);
-            //
-            List<string> newZnachS = new List<string>(); //Sale
-            newZnachP.Add(textBox11.Text);
-            newZnachP.Add(textBox9.Text);
-            newZnachP.Add(textBox3.Text);
-            newZnachP.Add(textBox15.Text);
-            //
-            admin.UpdateCurrency(newZnachP, newZnachS);
-            textBox6.Text = textBox12.Text;
-            textBox5.Text = textBox11.Text;
-            textBox8.Text = textBox10.Text;
-            textBox7.Text = textBox9.Text;
-            textBox14.Text = textBox4.Text;
-            textBox13.Text = textBox3.Text;
-            admin.UpdateCurrencyCBox(textBox16.Text, textBox15.Text, comboBox2.Text);
-
+            try
+            {
+                List<string> newZnachP = new List<string>(); //Purchase
+                newZnachP.Add(textBox12.Text);
+                newZnachP.Add(textBox10.Text);
+                newZnachP.Add(textBox4.Text);
+                newZnachP.Add(textBox16.Text);
+                //
+                List<string> newZnachS = new List<string>(); //Sale
+                newZnachS.Add(textBox11.Text);
+                newZnachS.Add(textBox9.Text);
+                newZnachS.Add(textBox3.Text);
+                newZnachS.Add(textBox15.Text);
+                //
+                admin.UpdateCurrency(newZnachP, newZnachS);
+                textBox6.Text = textBox12.Text;
+                textBox5.Text = textBox11.Text;
+                textBox8.Text = textBox10.Text;
+                textBox7.Text = textBox9.Text;
+                textBox14.Text = textBox4.Text;
+                textBox13.Text = textBox3.Text;
+                admin.UpdateCurrencyCBox(textBox16.Text, textBox15.Text, comboBox2.Text);
+                message.MessageOk("Курс успешно обновлен", "Успех");
+            }
+            catch (Exception t)
+            {
+                message.MessageErr(t.Message);
+            }
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -196,13 +206,6 @@ namespace Main.include.GUI
 
         }
 
-        private void Admin_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'exchangeDataSet.Курс' table. You can move, or remove it, as needed.
-            this.курсTableAdapter.Fill(this.exchangeDataSet.Курс);
-
-        }
-
         private void label7_Click(object sender, EventArgs e)
         {
 
@@ -255,20 +258,41 @@ namespace Main.include.GUI
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<string> textBox = new List<string>();
-            string cb1=comboBox1.Text;
-            textBox = admin.CurrChangeOp(cb1);
-            textBox2.Text = textBox[0];
-            textBox1.Text = textBox[1];
+            try
+            {
+                List<string> textBox = new List<string>();
+                string cb1 = comboBox1.Text;
+                textBox = admin.CurrChangeOp(cb1);
+                textBox2.Text = textBox[0];
+                textBox1.Text = textBox[1];
+            }
+            catch (Exception t)
+            {
+                message.MessageErr(t.Message);
+            }
         }
         
         private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            List<string> textBoxx = new List<string>();
-            string cb2 = comboBox2.Text;
-            textBoxx = admin.CurrChangeOp(cb2);
-            textBox16.Text = textBoxx[0];
-            textBox15.Text = textBoxx[1];
+            try
+            {
+                List<string> textBoxx = new List<string>();
+                string cb2 = comboBox2.Text;
+                textBoxx = admin.CurrChangeOp(cb2);
+                textBox16.Text = textBoxx[0];
+                textBox15.Text = textBoxx[1];
+            }
+            catch (Exception t)
+            {
+                message.MessageErr(t.Message);
+            }
+        }
+
+        private void FormAdminExchange_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dSetExchange.Курс' table. You can move, or remove it, as needed.
+            this.курсTableAdapter.Fill(this.dSetExchange.Курс);
+
         }
     }
 }

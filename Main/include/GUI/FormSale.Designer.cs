@@ -45,15 +45,15 @@
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.курсBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.exchangeDataSet = new Main.ExchangeDataSet();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.курсTableAdapter = new Main.ExchangeDataSetTableAdapters.КурсTableAdapter();
+            this.dSetExchange = new Main.DSetExchange();
+            this.курсBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.курсTableAdapter = new Main.DSetExchangeTableAdapters.КурсTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dSetExchange)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -224,16 +224,6 @@
             this.comboBox1.TabIndex = 5;
             this.comboBox1.ValueMember = "Название валюты";
             // 
-            // курсBindingSource
-            // 
-            this.курсBindingSource.DataMember = "Курс";
-            this.курсBindingSource.DataSource = this.exchangeDataSet;
-            // 
-            // exchangeDataSet
-            // 
-            this.exchangeDataSet.DataSetName = "ExchangeDataSet";
-            this.exchangeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -251,6 +241,16 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(169, 29);
             this.textBox5.TabIndex = 3;
+            // 
+            // dSetExchange
+            // 
+            this.dSetExchange.DataSetName = "DSetExchange";
+            this.dSetExchange.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // курсBindingSource
+            // 
+            this.курсBindingSource.DataMember = "Курс";
+            this.курсBindingSource.DataSource = this.dSetExchange;
             // 
             // курсTableAdapter
             // 
@@ -275,13 +275,13 @@
             this.Name = "FormSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Продажа";
-            this.Load += new System.EventHandler(this.Sale_Load);
+            this.Load += new System.EventHandler(this.FormSale_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dSetExchange)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,8 +306,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
-        private ExchangeDataSet exchangeDataSet;
+        private DSetExchange dSetExchange;
         private System.Windows.Forms.BindingSource курсBindingSource;
-        private ExchangeDataSetTableAdapters.КурсTableAdapter курсTableAdapter;
+        private DSetExchangeTableAdapters.КурсTableAdapter курсTableAdapter;
     }
 }

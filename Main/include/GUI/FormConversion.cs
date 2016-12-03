@@ -40,25 +40,13 @@ namespace Main.include.GUI
 
         private void Conversion_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'exchangeDataSet.Курс' table. You can move, or remove it, as needed.
-            this.курсTableAdapter.Fill(this.exchangeDataSet.Курс);
+            // TODO: This line of code loads data into the 'dSetExchange.Курс' table. You can move, or remove it, as needed.
+            this.курсTableAdapter.Fill(this.dSetExchange.Курс);
 
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
 
         }
 
@@ -69,8 +57,15 @@ namespace Main.include.GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Cashier cashier = new Cashier();
-            textBox2.Text = cashier.ConversOperation(comboBox1.Text, comboBox2.Text, textBox1.Text);
+            try
+            {
+                Cashier cashier = new Cashier();
+                textBox2.Text = cashier.ConversOperation(comboBox1.Text, comboBox2.Text, textBox1.Text);
+            }
+            catch (Exception t)
+            {
+                message.MessageErr(t.Message);
+            }
         }
     }
 }

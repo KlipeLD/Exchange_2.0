@@ -43,8 +43,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.курсBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.exchangeDataSet = new Main.ExchangeDataSet();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,7 +54,6 @@
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.курсBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -70,19 +67,18 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.курсBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.exchangeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.курсTableAdapter = new Main.ExchangeDataSetTableAdapters.КурсTableAdapter();
+            this.dSetExchange = new Main.DSetExchange();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.курсTableAdapter = new Main.DSetExchangeTableAdapters.КурсTableAdapter();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSetExchange)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -237,7 +233,7 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.comboBox1.DataSource = this.курсBindingSource1;
+            this.comboBox1.DataSource = this.bindingSource1;
             this.comboBox1.DisplayMember = "Название валюты";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -249,16 +245,6 @@
             this.comboBox1.TabIndex = 19;
             this.comboBox1.ValueMember = "Название валюты";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // курсBindingSource1
-            // 
-            this.курсBindingSource1.DataMember = "Курс";
-            this.курсBindingSource1.DataSource = this.exchangeDataSet;
-            // 
-            // exchangeDataSet
-            // 
-            this.exchangeDataSet.DataSetName = "ExchangeDataSet";
-            this.exchangeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label15
             // 
@@ -389,7 +375,7 @@
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.comboBox2.DataSource = this.курсBindingSource2;
+            this.comboBox2.DataSource = this.bindingSource2;
             this.comboBox2.DisplayMember = "Название валюты";
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -401,11 +387,6 @@
             this.comboBox2.TabIndex = 20;
             this.comboBox2.ValueMember = "Название валюты";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
-            // 
-            // курсBindingSource2
-            // 
-            this.курсBindingSource2.DataMember = "Курс";
-            this.курсBindingSource2.DataSource = this.exchangeDataSet;
             // 
             // textBox16
             // 
@@ -532,10 +513,6 @@
             this.label17.TabIndex = 19;
             this.label17.Text = "BYN";
             // 
-            // курсBindingSource
-            // 
-            this.курсBindingSource.DataMember = "Курс";
-            // 
             // button1
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
@@ -573,14 +550,24 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // exchangeDataSetBindingSource
+            // dSetExchange
             // 
-            this.exchangeDataSetBindingSource.DataSource = this.exchangeDataSet;
-            this.exchangeDataSetBindingSource.Position = 0;
+            this.dSetExchange.DataSetName = "DSetExchange";
+            this.dSetExchange.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "Курс";
+            this.bindingSource1.DataSource = this.dSetExchange;
             // 
             // курсTableAdapter
             // 
             this.курсTableAdapter.ClearBeforeFill = true;
+            // 
+            // bindingSource2
+            // 
+            this.bindingSource2.DataMember = "Курс";
+            this.bindingSource2.DataSource = this.dSetExchange;
             // 
             // FormAdminExchange
             // 
@@ -602,16 +589,14 @@
             this.Name = "FormAdminExchange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Обменник (Администратор)";
-            this.Load += new System.EventHandler(this.Admin_Load);
+            this.Load += new System.EventHandler(this.FormAdminExchange_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.курсBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exchangeDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSetExchange)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -660,10 +645,9 @@
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.BindingSource exchangeDataSetBindingSource;
-        private ExchangeDataSet exchangeDataSet;
-        private System.Windows.Forms.BindingSource курсBindingSource1;
-        private ExchangeDataSetTableAdapters.КурсTableAdapter курсTableAdapter;
-        private System.Windows.Forms.BindingSource курсBindingSource2;
+        private DSetExchange dSetExchange;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private DSetExchangeTableAdapters.КурсTableAdapter курсTableAdapter;
+        private System.Windows.Forms.BindingSource bindingSource2;
     }
 }

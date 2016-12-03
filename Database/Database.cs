@@ -16,7 +16,7 @@ namespace DatabaseDLL
     public class Database
     {
         OleDbConnection myOleDbConnection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
-@"D:\BSU\Лабы прога\Технологии программирования\Main\MainDLL\Database\Exchange.mdb");
+@"D:\BSU\Лабы прога\Технологии программирования\Main\Main\Exchange.mdb");
 
         public string CheckDB(string nameOfTable, string col, string row)
         {
@@ -102,21 +102,6 @@ namespace DatabaseDLL
             }
             myOleDbConnection.Close();
         }
-        public List<string> ReadDB(string nameOfTable, List<string> col, List<string> row)
-        {
-            List<String> arr = new List<String>();
-            using (myOleDbConnection)
-            {
-                myOleDbConnection.Open();
-                OleDbCommand cmd = new OleDbCommand("SELECT * FROM " + nameOfTable, myOleDbConnection);
-                OleDbDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    arr.Add(reader.GetString(0));
-                }
-            }
-            return arr;
-        }
         public List<string> ReadData(string nameOfTable, string colName)
         {
             List<string> data = new List<string>();
@@ -173,6 +158,23 @@ namespace DatabaseDLL
             }
             myOleDbConnection.Close();
             return textBox;
+        }
+         public List<string> ReadDbCol(string nameOfTable, string colName, string whereNameCol, string whereZ)
+        {
+            myOleDbConnection.Open();
+            List<string> data = new List<string>();
+            OleDbCommand cmd = new OleDbCommand("Select [" + colName + "] From [" + nameOfTable + "] WHERE [" + whereNameCol + "] ='" + whereZ + "'", myOleDbConnection);
+                OleDbDataReader dr = cmd.ExecuteReader();
+                while (dr.HasRows)
+                {
+                    while (dr.HasRows && dr.Read())
+                    {
+                        data.Add(dr.GetValue(0).ToString());
+                    }
+                    dr.NextResult();
+                }
+            myOleDbConnection.Close();
+            return data;
         }
     }
 }

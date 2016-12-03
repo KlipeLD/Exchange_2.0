@@ -29,20 +29,27 @@ namespace Main.include.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Cashier cashier = new Cashier();
-            string err;
-            err = cashier.PurchaseOperation(textBox1.Text, textBox4.Text, textBox5.Text, comboBox1.Text);
+            try
+            {
+                Cashier cashier = new Cashier();
+                string err;
+                err = cashier.PurchaseOperation(textBox1.Text, textBox4.Text, textBox5.Text, comboBox1.Text);
 
-            if (err == "1")
-            {
-                //  Hide();
-                // frm4.ShowDialog();
-                // Close();
-                message.MessageOk("Операция прошла успешно!", "Успех");
+                if (err == "1")
+                {
+                    //  Hide();
+                    // frm4.ShowDialog();
+                    // Close();
+                    message.MessageOk("Операция прошла успешно!", "Успех");
+                }
+                else
+                {
+                    message.MessageOk(err, "Error");
+                }
             }
-            else
+            catch (Exception t)
             {
-                message.MessageOk(err, "Error");
+                message.MessageErr(t.Message);
             }
         }
 
@@ -58,10 +65,10 @@ namespace Main.include.GUI
             this.Close();
         }
 
-        private void Purchase_Load(object sender, EventArgs e)
+        private void FormPurchase_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'exchangeDataSet.Курс' table. You can move, or remove it, as needed.
-            this.курсTableAdapter.Fill(this.exchangeDataSet.Курс);
+            // TODO: This line of code loads data into the 'dSetExchange.Курс' table. You can move, or remove it, as needed.
+            this.курсTableAdapter.Fill(this.dSetExchange.Курс);
 
         }
     }

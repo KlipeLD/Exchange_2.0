@@ -53,13 +53,5 @@ namespace MainDLL
             textBox.Add(db.ReturnZnach("Курс", "Название валюты", combBox, "Продажа"));
             return textBox;
         }
-        public List<String> StatOperation()
-        {
-            List<string> arr = new List<string>();
-            string nameOfTable = "Курс";
-            //   db.ReadAllData();
-            return arr;
-        }
-
     }
 }

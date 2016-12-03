@@ -28,19 +28,26 @@ namespace Main.include.GUI
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Cashier cashier = new Cashier();
-            string err;
-           err = cashier.CashEnter(textBox1.Text, textBox2.Text,textBox3.Text);
-            
-            if (err =="1")
+            try
             {
-                Hide();
-                frm4.ShowDialog();
-                Close();         
+                Bank bank = new Bank();
+                string err;
+                err = bank.CashEnter(textBox1.Text, textBox2.Text, textBox3.Text);
+
+                if (err == "1")
+                {
+                    Hide();
+                    frm4.ShowDialog();
+                    Close();
+                }
+                else
+                {
+                    message.MessageOk(err, "Error");
+                }
             }
-            else
+            catch (Exception t)
             {
-                message.MessageOk(err, "Error");
+                message.MessageErr(t.Message);
             }
         }
 
@@ -57,6 +64,11 @@ namespace Main.include.GUI
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            message.MessageOk("Program Exchange, Version 1.0.1\nCreated by:\nYantsevich Yulia\nhttps://klipeld.github.io\n©Klipe_LD, 2016", "About program");
         }
     }
 }

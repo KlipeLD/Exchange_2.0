@@ -50,15 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExchangeDataSet.Designer.cs">
+    <Compile Include="DSetExchange.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ExchangeDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ExchangeDataSet11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ExchangeDataSet11.xsd</DependentUpon>
+      <DependentUpon>DSetExchange.xsd</DependentUpon>
     </Compile>
     <Compile Include="include\GUI\FormAdminOption.cs">
       <SubType>Form</SubType>
@@ -163,27 +158,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ExchangeDataSet.xsc">
-      <DependentUpon>ExchangeDataSet.xsd</DependentUpon>
+    <None Include="DSetExchange.xsc">
+      <DependentUpon>DSetExchange.xsd</DependentUpon>
     </None>
-    <None Include="ExchangeDataSet.xsd">
+    <None Include="DSetExchange.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ExchangeDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DSetExchange.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ExchangeDataSet.xss">
-      <DependentUpon>ExchangeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ExchangeDataSet11.xsc">
-      <DependentUpon>ExchangeDataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="ExchangeDataSet11.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ExchangeDataSet11.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ExchangeDataSet11.xss">
-      <DependentUpon>ExchangeDataSet11.xsd</DependentUpon>
+    <None Include="DSetExchange.xss">
+      <DependentUpon>DSetExchange.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -199,7 +183,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="include\database\" />
     <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>
@@ -260,6 +243,11 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Exchange.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

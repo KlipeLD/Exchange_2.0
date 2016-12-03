@@ -34,15 +34,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // radioButton2
             // 
             this.radioButton2.AllowDrop = true;
-            this.radioButton2.AutoEllipsis = true;
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Location = new System.Drawing.Point(36, 126);
+            this.radioButton2.Location = new System.Drawing.Point(33, 139);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(60, 18);
             this.radioButton2.TabIndex = 18;
@@ -55,10 +55,9 @@
             // radioButton1
             // 
             this.radioButton1.AllowDrop = true;
-            this.radioButton1.AutoEllipsis = true;
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Location = new System.Drawing.Point(36, 76);
+            this.radioButton1.Location = new System.Drawing.Point(33, 92);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(105, 18);
             this.radioButton1.TabIndex = 17;
@@ -70,7 +69,6 @@
             // button2
             // 
             this.button2.AllowDrop = true;
-            this.button2.AutoEllipsis = true;
             this.button2.AutoSize = true;
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -87,7 +85,6 @@
             // button1
             // 
             this.button1.AllowDrop = true;
-            this.button1.AutoEllipsis = true;
             this.button1.AutoSize = true;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
@@ -108,20 +105,33 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(33, 26);
+            this.label1.Location = new System.Drawing.Point(33, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 20);
             this.label1.TabIndex = 14;
             this.label1.Text = "Войти в систему как:";
             this.label1.UseCompatibleTextRendering = true;
             // 
-            // Enter
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Kicking Limos", 12F, System.Drawing.FontStyle.Italic);
+            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(283, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 14);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Информация о программе";
+            // 
+            // FormEnter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(484, 239);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button2);
@@ -132,7 +142,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(500, 277);
             this.MinimumSize = new System.Drawing.Size(500, 277);
-            this.Name = "Enter";
+            this.Name = "FormEnter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добро пожаловать";
             this.ResumeLayout(false);
@@ -147,5 +157,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

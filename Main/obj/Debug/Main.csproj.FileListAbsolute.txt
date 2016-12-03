@@ -1,5 +1,4 @@
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Debug\Main.exe.config
-D:\BSU\Лабы прога\Технологии программирования\Main\Main\obj\Debug\Main.csprojResolveAssemblyReference.cache
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\obj\Debug\Main.include.GUI.FormCashierOption.resources
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\obj\Debug\Main.include.GUI.FormConversion.resources
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\obj\Debug\Main.include.GUI.FormEnter.resources
@@ -22,3 +21,5 @@ D:\BSU\Лабы прога\Технологии программирования
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Debug\MainDLL.dll
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Debug\Database.dll
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Debug\Database.pdb
+D:\BSU\Лабы прога\Технологии программирования\Main\Main\obj\Debug\Main.csprojResolveAssemblyReference.cache
+D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Debug\Exchange.mdb

@@ -2075,11 +2075,14 @@
         Xv0GDR4eVfUP//z7ydNnLV+97g8ffoJQyEVAIRS1RVh9/sXX/z92iZJNkm7uOQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="курсBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="dSetExchange.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>633, 17</value>
+  </metadata>
   <metadata name="курсBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>471, 17</value>
-  </metadata>
-  <metadata name="exchangeDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>325, 17</value>
   </metadata>
   <metadata name="курсBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>170, 17</value>
@@ -2163,7 +2166,7 @@
   <data name="groupBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUgAAAEyCAIAAAAXz97DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr0AAA69AUf7kK0AAP+lSURBVHheTN3nc17JkiZ2/M0KSbuj3dnRvTN9TVt6B++9
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAP+lSURBVHheTN3nc17JkiZ2/M0KSbuj3dnRvTN9TVt6B++9
         995bAiBIECA8SICuzZ2Z3f0ifVCEfnWevtiJqK6ukycrM6sqn8ysFy/Ams2dV1OzSxPTCw3NHS/qWwYG
         R7t7Bian5ubml2fnliYmZ7u6+41HRiefPK01Hh2bWlxae7l7MDU939nVV1vXtLm1u7C42tDYOjw+1Tc0
         Or+8NjY1a25P76BX0zML+FfXtnZeviJ8dGRybXXr7eGJwerqem9v/9TUzNLSyvLy6uzs/Pr65vb2y52d
@@ -4992,7 +4995,7 @@
 </value>
   </data>
   <metadata name="курсTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>633, 17</value>
+    <value>179, 56</value>
   </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -31,7 +31,8 @@ namespace Main.include.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            try
+            {
                 if (radioButton1.Checked)
                 {
                     Hide();
@@ -53,17 +54,22 @@ namespace Main.include.GUI
                     frmConv.ShowDialog();
                     Close();
                 }
-               else if (radioButton3.Checked)
+                else if (radioButton3.Checked)
                 {
-                Hide();
-                FormRegistration frmReg = new FormRegistration();
-                frmReg.ShowDialog();
-                Close();
+                    Hide();
+                    FormRegistration frmReg = new FormRegistration();
+                    frmReg.ShowDialog();
+                    Close();
                 }
                 else
                 {
-                message.MessageOk("Необходимо выбрать хотя бы 1 из пунктов", "Error 2");
+                    message.MessageOk("Необходимо выбрать хотя бы 1 из пунктов", "Error 2");
                 }
+            }
+            catch (Exception t)
+            {
+                message.MessageErr(t.Message);
+            }
         }
         
         private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -112,6 +118,11 @@ namespace Main.include.GUI
             FormCashier frmCashier = new FormCashier();
             frmCashier.ShowDialog();
             Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            message.MessageOk("Program Exchange, Version 1.0.1\nCreated by:\nYantsevich Yulia\nhttps://klipeld.github.io\n©Klipe_LD, 2016", "About program");
         }
     }
 }

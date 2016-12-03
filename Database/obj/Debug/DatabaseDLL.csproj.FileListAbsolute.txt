@@ -1,0 +1,5 @@
+D:\BSU\Лабы прога\Технологии программирования\Main\Database\bin\Debug\Database.dll
+D:\BSU\Лабы прога\Технологии программирования\Main\Database\bin\Debug\Database.pdb
+D:\BSU\Лабы прога\Технологии программирования\Main\Database\obj\Debug\DatabaseDLL.csprojResolveAssemblyReference.cache
+D:\BSU\Лабы прога\Технологии программирования\Main\Database\obj\Debug\Database.dll
+D:\BSU\Лабы прога\Технологии программирования\Main\Database\obj\Debug\Database.pdb
