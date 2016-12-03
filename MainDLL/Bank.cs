@@ -12,13 +12,13 @@ namespace MainDLL
         public string CashEnter(string surname, string name, string fname)
         {
             Database db = new Database();
-            Cashier cashier = new Cashier();
+            Cashier cashier = new Cashier(surname);
             List<string> col = new List<string>();
             List<string> val = new List<string>();
             string err = "0";
             if (surname != "" && name != "" && fname != "")
             {
-                cashier.NameCashier = surname;
+                
                 col.Add("Фамилия");
                 col.Add("Имя");
                 col.Add("Отчество");
@@ -30,6 +30,7 @@ namespace MainDLL
                 if (err == "1")
                 {
                     db.EnterToDB("Кассир", col, val);
+                    cashier.NameCashier = surname;
                 }
                 err = "1";
             }

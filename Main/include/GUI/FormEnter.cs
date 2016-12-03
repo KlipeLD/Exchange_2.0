@@ -26,8 +26,6 @@ namespace Main.include.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //try
-            //{
                 if (radioButton1.Checked)
                 {
                     Hide();
@@ -47,11 +45,6 @@ namespace Main.include.GUI
                 {
                     message.MessageOk("Необходимо выбрать хотя бы 1 из пунктов", "Error 1");
                 }
-            //}
-           // catch (Exception t)
-           // {
-           //     message.MessageErr(t.Message);
-           // }
         }
 
         private void button1_Click(object sender, EventArgs e)

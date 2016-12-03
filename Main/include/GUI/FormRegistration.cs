@@ -31,7 +31,7 @@ namespace Main.include.GUI
         {
             try
             {
-                Cashier cashier = new Cashier();
+                Cashier cashier = new Cashier("");
                 string err = cashier.Registration(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
                 if (err == "1")
                 {

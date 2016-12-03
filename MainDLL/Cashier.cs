@@ -8,15 +8,20 @@ using DatabaseDLL;
 namespace MainDLL
 {
 
-    public class Cashier
+    public class Cashier 
     {
         Database db = new Database();
         public string NameCashier { get; set; }
+        public Cashier(string nameCashier)
+        {
+                NameCashier = nameCashier;   
+        }
         public string PurchaseOperation(string surnameClient, string passport, string sum, string currency)
         {
             List<string> col = new List<string>();
             List<string> val = new List<string>();
             string err;
+            string date = DateTime.Today.ToString();
             if (surnameClient != "" && passport != "" && sum != "" && currency != "")
             {
                 col.Add("Фамилия клиента");
@@ -28,8 +33,8 @@ namespace MainDLL
                 //
                 val.Add(surnameClient);
                 val.Add(passport);
-                val.Add(NameCashier);
-                val.Add(DateTime.Today.ToString());
+                val.Add("Абрамович");
+                val.Add(date);
                 val.Add(sum);
                 val.Add(currency);
                 err = db.CheckDB("Клиент", col[1], val[1]);
@@ -53,6 +58,8 @@ namespace MainDLL
                             err = "1";
                             db.UpdateDBOne("Клиент", "Сумма покупки", dData2.ToString(),
                             "Номер паспорта", passport);
+                            Printer printer = new Printer();
+                            printer.Print(surnameClient, passport, sum, currency, NameCashier, "покупки");
                         }
                         catch (Exception e)
                         {
@@ -76,6 +83,7 @@ namespace MainDLL
             List<string> col = new List<string>();
             List<string> val = new List<string>();
             string err;
+            string date = DateTime.Today.ToString();
             if (surnameClient != "" && passport != "" && sum != "" && currency != "")
             {
                 col.Add("Фамилия клиента");
@@ -87,8 +95,8 @@ namespace MainDLL
                 //
                 val.Add(surnameClient);
                 val.Add(passport);
-                val.Add(NameCashier);
-                val.Add(DateTime.Today.ToString());
+                val.Add("Везовик");
+                val.Add(date);
                 val.Add(sum);
                 val.Add(currency);
                 err = db.CheckDB("Клиент", col[1], val[1]);
@@ -106,10 +114,12 @@ namespace MainDLL
                     }
                     else
                     {
-                            db.EnterToDB("Список операций", col, val);
-                            err = "1";
-                            db.UpdateDBOne("Клиент","Сумма продажи", dData2.ToString(),
-                            "Номер паспорта", passport);
+                        db.EnterToDB("Список операций", col, val);
+                        err = "1";
+                        db.UpdateDBOne("Клиент", "Сумма продажи", dData2.ToString(),
+                        "Номер паспорта", passport);
+                        Printer printer = new Printer();
+                        printer.Print(surnameClient, passport, sum, currency, NameCashier,"продажи");
                     }
                 }
                 else
@@ -123,7 +133,6 @@ namespace MainDLL
             }
             return err;
         }
-
         public string Registration(string surname, string name, string fname, string passport)
         {
             List<string> col = new List<string>();

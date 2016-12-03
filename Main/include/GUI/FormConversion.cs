@@ -59,7 +59,7 @@ namespace Main.include.GUI
         {
             try
             {
-                Cashier cashier = new Cashier();
+                Cashier cashier = new Cashier("");
                 textBox2.Text = cashier.ConversOperation(comboBox1.Text, comboBox2.Text, textBox1.Text);
             }
             catch (Exception t)

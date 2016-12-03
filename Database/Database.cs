@@ -159,22 +159,5 @@ namespace DatabaseDLL
             myOleDbConnection.Close();
             return textBox;
         }
-         public List<string> ReadDbCol(string nameOfTable, string colName, string whereNameCol, string whereZ)
-        {
-            myOleDbConnection.Open();
-            List<string> data = new List<string>();
-            OleDbCommand cmd = new OleDbCommand("Select [" + colName + "] From [" + nameOfTable + "] WHERE [" + whereNameCol + "] ='" + whereZ + "'", myOleDbConnection);
-                OleDbDataReader dr = cmd.ExecuteReader();
-                while (dr.HasRows)
-                {
-                    while (dr.HasRows && dr.Read())
-                    {
-                        data.Add(dr.GetValue(0).ToString());
-                    }
-                    dr.NextResult();
-                }
-            myOleDbConnection.Close();
-            return data;
-        }
     }
 }

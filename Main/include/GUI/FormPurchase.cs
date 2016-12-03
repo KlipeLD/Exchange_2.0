@@ -31,16 +31,17 @@ namespace Main.include.GUI
         {
             try
             {
-                Cashier cashier = new Cashier();
+                Cashier cashier = new Cashier("");
                 string err;
                 err = cashier.PurchaseOperation(textBox1.Text, textBox4.Text, textBox5.Text, comboBox1.Text);
 
                 if (err == "1")
                 {
-                    //  Hide();
-                    // frm4.ShowDialog();
-                    // Close();
+
                     message.MessageOk("Операция прошла успешно!", "Успех");
+                     Hide();
+                     formtoopen2.ShowDialog();
+                     Close();
                 }
                 else
                 {

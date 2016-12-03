@@ -19,6 +19,7 @@ namespace Main.include.GUI
         public FormStat()
         {
             InitializeComponent();
+            dateTimePicker1.Text = DateTime.Today.ToString();
         }
         private void button4_Click(object sender, EventArgs e)
         {

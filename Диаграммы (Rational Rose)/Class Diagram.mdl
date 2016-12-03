@@ -1,0 +1,686 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	204)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"581548F6005D"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    charSet    	204
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"581548F6005F"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"581548F6006D"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"581548F6005E"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"581548F60060"
+	logical_models 	(list unit_reference_list
+	    (object Class "Администратор"
+		quid       	"5815493001C4"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"581758970376"
+			supplier   	"Logical View::Обменный пункт банка"
+			quidu      	"5817566003AC"))
+		used_nodes 	(list uses_relationship_list
+		    (object Uses_Relationship
+			quid       	"5817590903BD"
+			supplier   	"Logical View::База Данных"
+			quidu      	"581758EE033C"))
+		operations 	(list Operations
+		    (object Operation "обновить курс валют"
+			quid       	"581686CE03A2"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "просмотреть текущий курс валют"
+			quid       	"583F32BD03AD"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "просмотреть курс валют"
+			quid       	"583F32CE0349"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Class "Кассир"
+		quid       	"5815493C03A1"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5817589B017D"
+			supplier   	"Logical View::Обменный пункт банка"
+			quidu      	"5817566003AC"))
+		used_nodes 	(list uses_relationship_list
+		    (object Uses_Relationship
+			quid       	"5817591F011C"
+			supplier   	"Logical View::База Данных"
+			quidu      	"581758EE033C"))
+		operations 	(list Operations
+		    (object Operation "продажа"
+			quid       	"581686AE0158"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "покупка"
+			quid       	"5816E7CA02CB"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "регистрация клиента"
+			quid       	"5816E7E80302"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "проверка клиента"
+			quid       	"5816E817023A"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "конверсия"
+			quid       	"583F3228026A"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "Ф.И.О."
+			quid       	"58167ED2014C")))
+	    (object Class " База Данных"
+		quid       	"5815497A01CD"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"58175894008F"
+			supplier   	"Logical View::Обменный пункт банка"
+			quidu      	"5817566003AC")))
+	    (object Class "GUI"
+		quid       	"5816805B021C"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5817588F024D"
+			supplier   	"Logical View::Обменник"
+			quidu      	"584356280270")))
+	    (object Class "Продажа валюты"
+		quid       	"5816844800F8")
+	    (object Class "Покупка валюты"
+		quid       	"5816845103C7")
+	    (object Class "Операция"
+		quid       	"581684CA0292"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"581758A0034B"
+			supplier   	"Logical View::Кассир"
+			quidu      	"5815493C03A1"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "Дата"
+			quid       	"581686460033")
+		    (object ClassAttribute "Сумма"
+			quid       	"5816E6C60003")))
+	    (object Class "Заголовок"
+		quid       	"5816851E01EB")
+	    (object Class "Полоса прокрутки"
+		quid       	"581685220295")
+	    (object Class "Строка состояния"
+		quid       	"581685260060")
+	    (object Class "Рабочая область"
+		quid       	"5816852802CF")
+	    (object Class "Главное меню"
+		quid       	"5816852B029B")
+	    (object Class "Обменный пункт банка"
+		quid       	"5817566003AC"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5843569602C5"
+			supplier   	"Logical View::Обменник"
+			quidu      	"584356280270"))
+		operations 	(list Operations
+		    (object Operation "Вход кассира"
+			quid       	"583FF5A2008B"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Class "NewInterface"
+		quid       	"581758770041"
+		stereotype 	"Interface")
+	    (object Class "База Данных"
+		quid       	"581758EE033C"
+		operations 	(list Operations
+		    (object Operation "Поиск записей в БД"
+			quid       	"5843557001B7"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "Запись в БД"
+			quid       	"5843558B035C"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "Обновление нескольких данных"
+			quid       	"5843559B03CE"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "Обновление одного значения"
+			quid       	"584355B602C0"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "Чтение записей в БД"
+			quid       	"584355C501A3"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "Чтение одного значения в БД"
+			quid       	"584355D00263"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Class "Обменник"
+		quid       	"584356280270")
+	    (object Association "$UNNAMED$0"
+		quid       	"5816860D01F9"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5816860E00FE"
+			supplier   	"Logical View::GUI"
+			quidu      	"5816805B021C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5816860E0100"
+			supplier   	"Logical View::Заголовок"
+			quidu      	"5816851E01EB")))
+	    (object Association "$UNNAMED$3"
+		quid       	"5816861002FE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"581686110186"
+			supplier   	"Logical View::GUI"
+			quidu      	"5816805B021C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"581686110195"
+			supplier   	"Logical View::Полоса прокрутки"
+			quidu      	"581685220295")))
+	    (object Association "$UNNAMED$6"
+		quid       	"581686140049"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"581686140318"
+			supplier   	"Logical View::GUI"
+			quidu      	"5816805B021C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"58168614031A"
+			supplier   	"Logical View::Строка состояния"
+			quidu      	"581685260060")))
+	    (object Association "$UNNAMED$9"
+		quid       	"5816861E032D"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"5816861F0232"
+			supplier   	"Logical View::GUI"
+			quidu      	"5816805B021C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"5816861F0234"
+			supplier   	"Logical View::Рабочая область"
+			quidu      	"5816852802CF")))
+	    (object Association "$UNNAMED$12"
+		quid       	"5816862203A6"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"5816862302CC"
+			supplier   	"Logical View::GUI"
+			quidu      	"5816805B021C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"5816862302CE"
+			supplier   	"Logical View::Главное меню"
+			quidu      	"5816852B029B")))
+	    (object Association "$UNNAMED$15"
+		quid       	"581686350130"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"581686360025"
+			supplier   	"Logical View::Операция"
+			quidu      	"581684CA0292"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"581686360027"
+			supplier   	"Logical View::Продажа валюты"
+			quidu      	"5816844800F8")))
+	    (object Association "$UNNAMED$18"
+		quid       	"5816863900EB"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"581686390399"
+			supplier   	"Logical View::Операция"
+			quidu      	"581684CA0292"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"58168639039B"
+			supplier   	"Logical View::Покупка валюты"
+			quidu      	"5816845103C7")))
+	    (object Association "$UNNAMED$21"
+		quid       	"581756370058"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"5817563B029C"
+			supplier   	"Logical View::Кассир"
+			quidu      	"5815493C03A1"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"5817563B029E"
+			supplier   	"Logical View::Операция"
+			quidu      	"581684CA0292"))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"581548F60064"
+		title      	"Main"
+		zoom       	85
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	96
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::Администратор" @1
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1198, 1162)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(836, 980)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	725
+			    justify    	0
+			    label      	"Администратор")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5815493001C4"
+			compartment 	(object Compartment
+			    Parent_View 	@1
+			    location   	(836, 1046)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	4
+			    max_width  	776
+			    justify    	1)
+			width      	743
+			height     	390
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::GUI" @2
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(739, 664)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(557, 565)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	364
+			    justify    	0
+			    label      	"GUI")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5816805B021C"
+			width      	382
+			height     	225
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Кассир" @3
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2437, 1147)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(2167, 873)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	540
+			    justify    	0
+			    label      	"Кассир")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5815493C03A1"
+			compartment 	(object Compartment
+			    Parent_View 	@3
+			    location   	(2167, 939)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	7
+			    max_width  	533
+			    justify    	1)
+			width      	558
+			height     	574
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Обменный пункт банка" @4
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1722, 675)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1490, 595)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	464
+			    justify    	0
+			    label      	"Обменный пункт банка")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5817566003AC"
+			compartment 	(object Compartment
+			    Parent_View 	@4
+			    location   	(1490, 661)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	2
+			    max_width  	368
+			    justify    	1)
+			width      	482
+			height     	186
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @5
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5817589B017D"
+			client     	@3
+			supplier   	@4
+			vertices   	(list Points
+			    (2157, 963)
+			    (1863, 768))
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::База Данных" @6
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3120, 1740)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(2743, 1492)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	754
+			    justify    	0
+			    label      	"База Данных")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"581758EE033C"
+			compartment 	(object Compartment
+			    Parent_View 	@6
+			    location   	(2743, 1558)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	7
+			    max_width  	769
+			    justify    	1)
+			width      	772
+			height     	522
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UsesView "" @7
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5817591F011C"
+			client     	@3
+			supplier   	@6
+			vertices   	(list Points
+			    (2716, 1390)
+			    (2818, 1478))
+			line_style 	0)
+		    (object InheritView "" @8
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"581758970376"
+			client     	@1
+			supplier   	@4
+			vertices   	(list Points
+			    (1407, 966)
+			    (1619, 768))
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::Обменник" @9
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1330, 198)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(987, 83)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	687
+			    justify    	0
+			    label      	"Обменник")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"584356280270"
+			width      	705
+			height     	257
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @10
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5817588F024D"
+			client     	@2
+			supplier   	@9
+			vertices   	(list Points
+			    (879, 551)
+			    (1165, 326))
+			line_style 	0)
+		    (object InheritView "" @11
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5843569602C5"
+			client     	@4
+			supplier   	@9
+			vertices   	(list Points
+			    (1645, 581)
+			    (1436, 326))
+			line_style 	0)))
+	    (object ClassDiagram "Диаграмма классов"
+		quid       	"58154905027C"
+		title      	"Диаграмма классов"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"581548F60060"
+	physical_models 	(list unit_reference_list
+	    (object module "NewSubprogBody" "SubType" "Body"
+		quid       	"5816892E03C5"
+		stereotype 	"Subprogram Body"
+		language   	""))
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"581548F6006C"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object Module_Diagram "NewDiagram"
+		quid       	"581688BF0269"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"581548F6005E")
+    process_structure 	(object Processes
+	quid       	"581548F60061"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"581548F60063"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"581548F60062"))
