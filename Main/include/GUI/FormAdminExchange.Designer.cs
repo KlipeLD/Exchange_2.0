@@ -43,6 +43,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dSetExchange = new Main.DSetExchange();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,6 +56,7 @@
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -70,14 +73,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dSetExchange = new Main.DSetExchange();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.курсTableAdapter = new Main.DSetExchangeTableAdapters.КурсTableAdapter();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dSetExchange)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSetExchange)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -246,6 +246,16 @@
             this.comboBox1.ValueMember = "Название валюты";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "Курс";
+            this.bindingSource1.DataSource = this.dSetExchange;
+            // 
+            // dSetExchange
+            // 
+            this.dSetExchange.DataSetName = "DSetExchange";
+            this.dSetExchange.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -387,6 +397,11 @@
             this.comboBox2.TabIndex = 20;
             this.comboBox2.ValueMember = "Название валюты";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
+            // 
+            // bindingSource2
+            // 
+            this.bindingSource2.DataMember = "Курс";
+            this.bindingSource2.DataSource = this.dSetExchange;
             // 
             // textBox16
             // 
@@ -550,24 +565,9 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dSetExchange
-            // 
-            this.dSetExchange.DataSetName = "DSetExchange";
-            this.dSetExchange.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "Курс";
-            this.bindingSource1.DataSource = this.dSetExchange;
-            // 
             // курсTableAdapter
             // 
             this.курсTableAdapter.ClearBeforeFill = true;
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataMember = "Курс";
-            this.bindingSource2.DataSource = this.dSetExchange;
             // 
             // FormAdminExchange
             // 
@@ -575,7 +575,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(864, 453);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(864, 452);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -584,7 +585,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(880, 491);
+            this.MaximumSize = new System.Drawing.Size(1000, 1000);
             this.MinimizeBox = false;
             this.Name = "FormAdminExchange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -592,10 +593,10 @@
             this.Load += new System.EventHandler(this.FormAdminExchange_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSetExchange)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dSetExchange)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -23,3 +23,5 @@ D:\BSU\Лабы прога\Технологии программирования
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Release\Database.pdb
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\bin\Release\Exchange.mdb
 D:\BSU\Лабы прога\Технологии программирования\Main\Main\obj\Release\Main.csprojResolveAssemblyReference.cache
+D:\Проекты\С#\Exchange_2.0\Main\obj\Release\Main.csprojResolveAssemblyReference.cache
+D:\Проекты\С#\Exchange_2.0\Main\obj\Release\Interop.MDACVer.dll
